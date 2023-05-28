@@ -1,0 +1,12 @@
+#!/bin/bash
+
+RESULT=$(whoami)
+echo "your name is:"$RESULT
+
+RES=$(env | grep -w "PWD" | pwd '/%')
+echo "your working directory is:"$RES
+
+USERS=$(ps -ef | grep ssh | wc -l)
+echo "Number of users:"$USERS
+
+echo "done"
